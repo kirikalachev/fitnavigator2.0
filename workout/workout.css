@@ -1,0 +1,58 @@
+.tableHeading {
+    font-weight: 600;
+    font-size: 22px;
+    width: 60%;
+    margin: auto;
+    height: 50px;
+    background-color: #161616;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    color: white;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
+    font-size: 22px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #202020;
+}
+
+tr:nth-child(odd) {
+    background-color: #2b2b2b;
+}
+
+.exercise-guide {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.exercise-guide a {
+    color: #FF6B00;
+}
+
+@media only screen and (max-width: 600px) {
+    .tableHeading {
+        width: 95%;
+    }
+    table {
+        width: 95%;
+    }
+
+    .exercise-guide {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
