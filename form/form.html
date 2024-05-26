@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../base.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="form.css">
+
+    <title>Създаване на програма - Фит Навигатор</title>
+
+    <link rel="icon" type="image/x-icon" href="../favicon.png"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div id="mobile-menu">
+                <div class="vissible-content">
+                    <!-- MENU --><button class="burger-menu"><i class='bx bx-menu'></i></button>
+                
+                    <!--homePage--> 
+                    <a href="../index/index.html" title="Главна страница"  id="logo">
+                        <img src="https://fitnavigator.pythonanywhere.com/static/basicFiles/logo.png" alt="Фит Навигатор" width="80" height="auto">
+                    </a>
+
+                    <!-- Profile -->
+                    <a href="../profile/profile.html" title="Профил"><i class='bx bx-user-circle user-circle'></i></a>
+                </div>
+
+                <div class="mobile-content">
+                    <a href="../about/about.html" class="navButton">За сайта</a>
+            
+                    <a href="../form/form.html" class="navButton">Създай план</a>
+            
+                    <a href="../excercises/excercises.html" class="navButton">Наръчник за упражнения</a>
+             
+                    <a href="../forum/forum.html" class="navButton">Форум</a>
+
+                    <a href="../bmi/bmi.html" class="navButton">BMI калкулатор</a>
+
+                    <a href="../bmr/bmr.html" class="navButton">BMR калкулатор</a>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="desktop-menu">
+                <a href="../index/index.html" title="Главна страница">
+                    <img src="https://fitnavigator.pythonanywhere.com/static/basicFiles/logo.png" alt="Фит Навигатор" id="logo" width="80" height="auto">
+                </a>
+    
+                <a href="../about/about.html" class="navButton">За сайта</a>
+            
+                <a href="../form/form.html" class="navButton">Създай план</a>
+        
+                <a href="../excercises/excercises.html" class="navButton">Наръчник за упражнения</a>
+         
+                <a href="../forum/forum.html" class="navButton">Форум</a>
+        
+                <a href="../profile/profile.html" title="Профил"><i class='bx bx-user-circle user-circle'></i></a>
+            </div>
+            
+        </nav>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="form">
+                <video autoplay loop muted class="video-background" autoplay loop>
+                    <source src="../intro_section.mp4" type="video/mp4">
+                </video>
+    
+            <form method = "post">
+                <span class="questions">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="WQxuFmysjIZsBuzBf338cmxwrhaX8JgaBbAVhw25pwD9UYwhtUV7R6vBUf85bvwT">
+                    <h2 class="heading">Попълнете вашата информация:</h2>
+                    <div class="question">
+                        <p for="env">1. Kъде искате да тренирате?</p>
+                        <input type="radio" name="env" id="env_gym" value="gym">
+                        <label for="env_gym">Фитнес</label>
+                        <input type="radio" name="env" id="env_home" value="home">
+                        <label for="env_home">Навън/У дома</label>
+                    </div>
+                    
+                    <div class="question">
+                        <p for="gender">2. Какъв е вашият пол?</p>
+                        <input type="radio" name="gender" id="gender_male" value="male">
+                        <label for="gender_male">Мъж</label>
+                        <input type="radio" name="gender" id="gender_female" value="female">
+                        <label for="gender_female">Жена</label>
+                    </div>
+                    
+                    <div class="question">
+                        <p for="goals">3. Какви са вашите цели?</p>
+                        <input type="radio" name="goals" id="goals_gainWeight" value="gainWeight">
+                        <label for="goals_gainWeight">Покачване на мускулна маса</label>
+                        <input type="radio" name="goals" id="goals_loseWeight" value="loseWeight">
+                        <label for="goals_loseWeight">Загуба на излишни мазнини</label>
+                    </div>
+                    
+                    <div class="question">
+                        <p for="time">4. Как бихте определили вашето ежедневие?</p>
+                        <input type="radio" name="time" id="time_free" value="free">
+                        <label for="time_free">Свободно</label>
+                        <input type="radio" name="time" id="time_busy" value="busy">
+                        <label for="time_busy">Натоварено</label>
+                    </div>
+                    
+                    <div class="question">
+                        <p for="bodytype">5. Колко е вашият BMI? <a href="../bmi/bmi.html">BMI калкулатор</a></p>
+                        <input type="radio" name="bodytype" id="bodytype_underweight" value="underweight">
+                        <label for="bodytype_underweight">под 20</label>
+                        <input type="radio" name="bodytype" id="bodytype_normal" value="normal">
+                        <label for="bodytype_normal">под 25</label>
+                        <input type="radio" name="bodytype" id="bodytype_overweight" value="overweight">
+                        <label for="bodytype_overweight">над 25</label>
+                    </div>
+                    
+                    <input type="submit" value="Изпрати" id="submit">
+                </span>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <h3>Социални мрежи:</h3>
+
+                <span class="links">
+                    <span><a href="#"><i class='bx bxl-instagram'></a></i></span>
+                    <span><a href="#"><i class='bx bxl-facebook'></a></i></span>
+                    <span><a href="#"><i class='bx bxl-youtube' ></a></i></span>
+                </span>
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <h3>Fit Navigator<span class="underline"></span></h3>
+                        <p>
+                            ФитНавигатор е първият български безплатен уебсайт, който предоставя перфектни тренировъчни планове и насочва към правилния начин на хранене.
+                        </p>
+                </div>
+
+                <div class="column">
+                    <h3>За сайта<span class="underline"></span></h3>
+                    <ul>
+                        <li class="row"><a href="../about/about.html">Какво представлява?</a></li>
+                        <li class="row"><a href="../about/about.html">ЧЗВ</a></li>
+                        <li class="row"><a href="../about/about.html">Кои сме ние?</a></li>
+                        <li class="row"><a href="../about/about.html">Инструкции за използване на сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>Калкулатори<span class="underline"></span></h3>
+                    <ul>
+                        <li class="row"><a href="../bmi/bmi.html">BMI калкулатор</a></li>
+                        <li class="row"><a href="../bmr/bmr.html">BMR калкулатор</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>Полезни връзки<span class="underline"></span></h3>
+                    <ul>
+                        <li class="row"><a href="mailto:someone@example.com"><i class='bx bxs-phone-call'></i>Свържете се с нас</a></li>
+                        <li class="row"><a href="../login/login.html"><i class='bx bxs-user-circle'></i>Логин</a></li>
+                        <li class="row"><a href="../registration/registration.html"><i class='bx bxs-user-plus'></i>Регистрация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="allRightReserved">© 2024 Copyright: TourFinder.com</div>
+    </footer>
+    <script src="../responsive-nav.js"></script>
+</body>
+</html>
